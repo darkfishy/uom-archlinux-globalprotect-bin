@@ -1,0 +1,9 @@
+# Sources
+src/
+*.tar.gz
+*.deb
+
+# Built package
+pkg/
+*.pkg.tar.xz
+*.pkg.tar.zst

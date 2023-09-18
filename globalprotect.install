@@ -1,0 +1,31 @@
+post_install() {
+  update-desktop-database
+  cat << EOF
+To use GlobalProtect, enable and start Daemon system service:
+    $ sudo systemctl enable --now gpd
+Also enable and start Agent user service:
+    $ systemctl --user enable --now gpa
+To start the GUI, run following command or add it to your autostart.
+An XDG Autostart entry has also been created in '/etc/xdg/autostart'.
+    $ PanGPUI start &
+Alternatively, start the Global Protect Desktop Entry using your
+application launcher.
+Ensure your default browser is running before attempting connection.
+You may have to restart the UI, in case it doesn't connect on first start
+Run the following command to terminate all instances of GUI:
+    $ pkill -9 PanGPUI
+EOF
+}
+
+post_upgrade() {
+  post_install
+}
+
+post_remove() {
+  cat << EOF
+GlobalProtect has been uninstalled; you may want to ensure that the gpa/gpd 
+systemd services have been stopped!
+    $ sudo systemctl disable --now gpd
+    $ systemctl --user disable --now gpa
+EOF
+}

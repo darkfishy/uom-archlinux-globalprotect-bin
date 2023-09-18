@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalProtect>
+    <Settings>
+        <connect-method>on-demand</connect-method>
+        <default-browser>yes</default-browser>
+    </Settings>
+    <PanSetup>
+        <Portal>vpn.unimelb.edu.au</Portal>
+    </PanSetup>
+</GlobalProtect>
