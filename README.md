@@ -19,6 +19,8 @@ Update the `sha256sums` appropriately.
 It is also assumed that you are [building in a clean chroot](https://wiki.archlinux.org/title/DeveloperWiki:Building_in_a_clean_chroot) 
 and have the [pre-requisites installed](https://wiki.archlinux.org/title/Creating_packages#Prerequisite_software).
 
+If you have trouble starting the daemon or client, first ensure that you have followed the instructions from post-install messages. Also check [AUR](https://aur.archlinux.org/packages/globalprotect-bin) for suggestions from others.
+
 One of the required dependencies is [qt5-webkit](https://aur.archlinux.org/packages/qt5-webkit)<sup>AUR</sup>, 
 however, it takes very long to build that package. 
 You may choose to install the [pre-built binary](https://aur.archlinux.org/packages/qt5-webkit#comment-896552) released 
